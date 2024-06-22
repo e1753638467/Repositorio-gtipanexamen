@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gtipanexamen.Vistas.login"
+             Title="login">
+ <VerticalStackLayout Spacing="20" Padding="20">
+        
+        <!-- Título de Inicio de Sesión -->
+        <Label Text="INICIO DE SESION"
+               FontSize="20"
+               TextColor="Red"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+        
+        <!-- Logo de la empresa (imagen 1) -->
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
+               WidthRequest="100"
+               Aspect="AspectFit"/>
+
+       
+        
+        <!-- Grid para disposición de etiquetas, entradas y botones -->
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <!-- Fila 1 para etiqueta de Usuario -->
+                <RowDefinition Height="Auto"/> <!-- Fila 2 para etiqueta de Contraseña -->
+                <RowDefinition Height="Auto"/> <!-- Fila 3 para botones -->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/> <!-- Columna 1 para etiquetas -->
+                <ColumnDefinition Width="*"/>    <!-- Columna 2 para entradas -->
+            </Grid.ColumnDefinitions>
+            
+            <!-- Etiqueta de Usuario -->
+            <Label Text="USUARIO"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            
+            <!-- Entrada de Usuario -->
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            
+            <!-- Etiqueta de Contraseña -->
+            <Label Text="CONTRASEÑA"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            
+            <!-- Entrada de Contraseña -->
+            <Entry x:Name="txtPassword"
+                   Placeholder="Ingrese la contraseña"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+            
+            <!-- Botón de Iniciar Sesión -->
+            <Button x:Name="btnInicio"
+                    Text="INICIAR SESION"
+                    Clicked="btnInicio_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"/> <!-- ColumnSpan para ocupar las dos columnas -->
+            
+            <!-- Botón de Registro de Usuario -->
+            <Button x:Name="btnRegistro"
+                    Text="REGISTRAR USUARIO"
+                    Clicked="btnRegistro_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

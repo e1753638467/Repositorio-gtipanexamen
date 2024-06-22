@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gtipanexamen.Vistas.Resumen"
+             Title="Resumen">
+    <StackLayout Padding="20" Spacing="20">
+        <!-- Usuario Conectado -->
+        <Label x:Name="lblUsuarioConectado" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <!-- Grid principal con 9 filas y 2 columnas -->
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+              ColumnDefinitions="Auto, *">
+            <!-- Nombre -->
+            <Label Text="Nombre:" VerticalOptions="Center" />
+            <Label x:Name="lblNombre" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- Apellido -->
+            <Label Text="Apellido:" Grid.Row="1" VerticalOptions="Center" />
+            <Label x:Name="lblApellido" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- Edad -->
+            <Label Text="Edad:" Grid.Row="2" VerticalOptions="Center" />
+            <Label x:Name="lblEdad" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- Fecha -->
+            <Label Text="Fecha:" Grid.Row="3" VerticalOptions="Center" />
+            <Label x:Name="lblFecha" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- Ciudad -->
+            <Label Text="Ciudad:" Grid.Row="4" VerticalOptions="Center" />
+            <Label x:Name="lblCiudad" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- País -->
+            <Label Text="País:" Grid.Row="5" VerticalOptions="Center" />
+            <Label x:Name="lblPais" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- Monto Inicial -->
+            <Label Text="Monto Inicial:" Grid.Row="6" VerticalOptions="Center" />
+            <Label x:Name="lblMontoInicial" Grid.Row="6" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- Pago mensual -->
+            <Label Text="Pago mensual:" Grid.Row="7" VerticalOptions="Center" />
+            <Label x:Name="lblPagoMensual" Grid.Row="7" Grid.Column="1" VerticalOptions="Center" />
+
+            <!-- Pago Total -->
+            <Label Text="Pago Total:" Grid.Row="8" VerticalOptions="Center" />
+            <Label x:Name="lblPagoTotal" Grid.Row="8" Grid.Column="1" VerticalOptions="Center" />
+        </Grid>
+    </StackLayout>
+</ContentPage>
